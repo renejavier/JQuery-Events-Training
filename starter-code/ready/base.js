@@ -5,14 +5,17 @@
 
 
 $(document).ready(function(){
-  console.log( "The page says:", $("h1").html("Go!") );
+  console.log( "The page says:", $("h1").text("Go!") );
+
+  $("h1").text();
+
+  if ( $("h1").text() === "Go!" ){
+    console.log( "The page says:", $("h1").text() );
+    console.log("Success!");
+  } else {
+    console.log( 'Can you make it say "Go!"?' );
+  }
+
+
+
 });
-
-$("h1").text();
-
-if ( $("h1").text() === "Go!" ){
-  console.log( "The page says:", $("h1").text() );
-  console.log("Success!");
-} else {
-  console.log( 'Can you make it say "Go!"?' );
-}
